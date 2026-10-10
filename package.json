@@ -1,0 +1,1 @@
+{ "name": "servicecore-sdlc-demo", "version": "1.0.0", "private": true, "scripts": { "test": "node test/payment.test.js" } }
