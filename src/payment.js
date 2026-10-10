@@ -2,7 +2,7 @@
 const TIMEOUT_MS = 30000; // yoğun saatlerde 10 sn yetmiyordu
 
 function pay(amount) {
-  if (!(amount > 0)) throw new Error("Geçersiz tutar");
+  if (typeof amount !== "number" || !Number.isFinite(amount) || amount <= 0) throw new Error("Geçersiz tutar: sıfır, negatif ya da sayı olmayan tutar gönderilemez");
   return { status: "ok", amount, timeoutMs: TIMEOUT_MS };
 }
 
